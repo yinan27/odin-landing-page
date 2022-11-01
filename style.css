@@ -1,186 +1,166 @@
-body {
-  display: flex;
-  flex-flow: column;
-  margin: auto;
-}
 
-.header-container,
-.content-container,
-.footer-container {
-  display: flex;
-  justify-content: center;
-  flex:1;
+body {
+  margin:0px;
+
   
 }
 
+/* below is header in common */
+
 .header-container {
+  /* display: flex; 
+  flex-direction: column; 
+  flex-grow: 1;   */
+  background-color:#1f2937;
+}
+
+.header-navbar,
+.intro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+/* above is header in common
+below is header-navbar */
+
+.header-navbar {
   display: flex;
-  background-color: grey;
-  justify-content: center;
   align-items: center;
-  padding: 10px 50px 20px;
-  flex: 1;
-}
-
-
-.header {
-  display: flex;
-  flex-flow: column;
-  flex: 1;
-  padding: 0px 50px;
-  gap: 30px;
-  max-width: 1000px;
-
-}
-
-
-.logo-links {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* border: 1px solid white; */
 }
 
-.logo-links .links {
+.header-navbar .links {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
-.links a {
+a {
   text-decoration: none;
-  color: aliceblue;
+  color: white;
 }
+
+/* above is header's navbar
+/* below is header's intro */
 
 .intro {
   display: flex;
-  flex-flow: row wrap-reverse;
-  justify-content: space-between;
-  align-items: start;
-  gap: 10px;
-  border: 1px solid black;
-
-  }
-
-.text-button {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  border: 1px solid black;
-
+  flex-wrap: wrap-reverse;
+  /* border: 1px solid white; */
+  justify-content: center;
+  gap: 50px ;
 }
 
-.text-button h1,
-.text-button p,
-.text-button button {
-  margin: 0px;
-  flex:1;
-}
-
-.text-button button {
-  align-self: flex-start;
-  flex:1;
-  background-color: aqua;
-  padding: 5px;
-}
-
-.text-button button a {
-  text-decoration: none;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  flex:1;
-  align-items: center;
-} 
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-bottom: 100px;
-  gap: 100px;
-  /* flex: 1; */
-
-}
-
-.cards div {
-  width: 110px;
-  height: 150px;
-}
-
-.cards div .box {
-  width: 200px;
-  height:200px;
-  border: 1px solid black;
-  border-radius: 20px;
-  margin: 0px;
-  
-}
-
-.cards div .text {
+.text-container {
+  color: white;
+  max-width: 500px;
   overflow-wrap: break-word;
 }
+.text-container p {
+  text-align: justify;
+}
 
-.quote-container {
+.intro .image img {
+  max-width: 500px;
+}
+
+/* above is header-intro
+below is photo-cards */
+
+/* .photo-cards-container {
   display: flex;
-  padding: 50px;
-  background-color: grey;
-  align-self: stretch;
   flex-direction: column;
   align-items: center;
- 
+} */
 
+.photo-cards-container h1{
+  text-align: center;
+  padding: 50px;
 }
-.quote {
+
+.photos {
   display: flex;
-  max-width: 500px;
-  flex-direction: column;
-  align-items:flex-end; 
-  gap: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
 }
 
-.quote .text {
+.col img,
+.col p {
+  max-width: 250px;
+}
 
+.col {
+  text-align: center;
+  margin: auto;
+}
+
+/* above is gallery
+below is quote */
+
+.quote-container {
+  background-color: gainsboro;
+  padding: 100px ;
+}
+
+.quote {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.quote p {
+ text-align:justify
+}
+
+.reference {
+  text-align: end;
+}
+
+/* above is quote
+below is signup card */
+
+.signup-card-container {
+  display:flex;
+  justify-content: center;
+  padding: 50px;
 }
 
 .signup-card {
   display: flex;
-  background-color:rgb(77, 128, 238);
+  justify-content: center;
+  background-color: #3882f6;
   margin: 50px;
   padding: 50px;
-  gap: 100px;
+  gap: 50px;
   border-radius: 10px;
 }
 
-.signup-card .text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: white;
-}
-.signup-card .text h5,
-.signup-card .text p {
-  margin: 1px;
+button {
+  align-self: center;
 }
 
-.signup-card button {
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  background-color: #3882f6;
-  border: 1px solid white;
-  padding: 5px 10px;
-}
-.signup-card .button a {
-  text-decoration: none;
-  color: white;
-}
-
-.footer-container {
-  background-color: grey;
-}
+/* above is signup card
+below is footer */
 
 .footer {
+  background-color: #1f2937;
+  color: white;
   padding: 10px;
+  text-align: center;
+}
+
+/* 
+below is all */
+
+.header-container,
+.photo-cards-container,
+.quote-container,
+.signup-card-container,
+.footer {
+  height: 100%;
 }
